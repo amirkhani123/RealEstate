@@ -3,25 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary:#1d4ed8;
+  --second: #ffffff;
+  --dark:#0f172a;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--second);
+  max-width: 1200px;
+  margin: auto;
+  font-weight: 200;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+input,textarea,button{
+  font-family: inherit;
+  color: inherit;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.datePicker input{
+  text-align: center;
+  width: 130px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.lable-radio{
+  @apply  bg-blue-500 p-1 rounded-md text-white font-light flex my-1 gap-2 
+}
+.button-hover{
+  @apply  transition-all duration-300 ease-in hover:opacity-50
 }
