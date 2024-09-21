@@ -9,7 +9,7 @@ function Header() {
   const [isDark, setIsDark] = useState(false);
   const { data } = useSession();
   return (
-    <header className="flex items-center justify-between bg-primary p-1 lg:rounded-lg lg:my-2 h-[80px] px-2 ">
+    <header className="flex items-center justify-between bg-primary p-1 lg:rounded-lg lg:my-1 h-[80px] px-2 ">
       <ul className="flex gap-4">
         <li className="ease-in transition-all duration-600 relative before:content-[' '] before:w-0 before:absolute before:bg-second before:h-[1.2px]  before:top-6 before:right-1 hover:before:w-full before:transition-all before:duration-500 before:ease-in ">
           <Link href="/">صفحه اصلی</Link>

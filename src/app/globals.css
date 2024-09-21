@@ -40,8 +40,22 @@ input,textarea,button{
   cursor: pointer;
 }
 .lable-radio{
-  @apply  bg-blue-500 p-1 rounded-md text-white font-light flex my-1 gap-2 
+  @apply  bg-blue-500 p-1 rounded-md text-white font-light flex my-1 gap-2 ;
 }
 .button-hover{
-  @apply  transition-all duration-300 ease-in hover:opacity-50
+  @apply  transition-all duration-300 ease-in hover:opacity-50;
+}
+.home-card{
+  @apply w-[205px] h-[215px]  m-1  flex items-center flex-col  rounded-md overflow-hidden shadow-3xl transition-all ease-in duration-300 cursor-pointer;
+}
+.home-card p{
+  @apply text-primary mt-2 text-lg font-medium dark:text-second ;
+}
+.home-card:hover{
+  
+  @apply w-[215px]  rotate-[-10deg];
+
+}
+.home-list{
+  @apply w-[165px] flex items-center gap-5 font-light text-lg bg-blue-200 py-1 px-2 rounded-md;
 }

@@ -5,6 +5,7 @@ import { GiPostOffice } from "react-icons/gi";
 import { GrLocation } from "react-icons/gr";
 import Link from "next/link";
 function Card({ data: { title, location, price, description, category } }) {
+  const myPrice = Number(price);
   const icons = {
     villa: <MdOutlineVilla size={25} />,
     apartment: <PiBuildingApartmentFill size={25} />,
@@ -22,12 +23,15 @@ function Card({ data: { title, location, price, description, category } }) {
         {location}
       </p>
       <p className=" text-gray-700 my-2 mr-px font-light">
-        {price.toLocaleString("fa-IR")} تومان
+        {myPrice.toLocaleString("fa-IR")} تومان
       </p>
-      <Link href="/dashboard" className="flex items-center justify-between text-primary mt-5">
-      مشاهده آگهی
-      <FaArrowCircleLeft/>
-       </Link>
+      <Link
+        href="/dashboard"
+        className="flex items-center justify-between text-primary mt-5"
+      >
+        مشاهده آگهی
+        <FaArrowCircleLeft />
+      </Link>
     </div>
   );
 }

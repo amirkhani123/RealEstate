@@ -19,7 +19,7 @@ function MyAdsCard({ data }) {
     }
   };
   return (
-    <div className="w-full h-[270px] flex gap-5 border-blue-600 border-[2px] p-2 rounded-md">
+    <div className="w-full h-[270px] flex gap-5 border-blue-600 border-[2px] p-2 rounded-md m-1">
       <Card data={data} />
       <div className="flex items-center justify-between w-[65%] mt-[180px]">
         <Link
