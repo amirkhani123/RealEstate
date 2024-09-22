@@ -1,21 +1,12 @@
-import { FaArrowCircleLeft, FaLocationArrow, FaStore } from "react-icons/fa";
-import { MdOutlineVilla } from "react-icons/md";
-import { PiBuildingApartmentFill } from "react-icons/pi";
-import { GiPostOffice } from "react-icons/gi";
+import { FaArrowCircleLeft } from "react-icons/fa";
 import { GrLocation } from "react-icons/gr";
 import Link from "next/link";
-function Card({
-  data: { title, location, price, description, category, _id },
-}) {
+import { icons } from "@/constants/Variables";
+function Card({ data: { title, location, price, category, _id } }) {
   const myPrice = Number(price);
-  const icons = {
-    villa: <MdOutlineVilla size={25} />,
-    apartment: <PiBuildingApartmentFill size={25} />,
-    store: <FaStore size={25} />,
-    office: <GiPostOffice size={25} />,
-  };
+
   return (
-    <div className="w-[220px] h-[240px] border p-2 border-blue-700 rounded-md">
+    <div className="w-[220px] h-[240px] border p-2 border-blue-700 rounded-md max-sm:w-full max-sm:flex max-sm:items-center max-sm:flex-col ">
       <div className="bg-blue-200 w-fit p-1 text-blue-800 rounded-md">
         {icons[category]}
       </div>

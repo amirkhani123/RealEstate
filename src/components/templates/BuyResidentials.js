@@ -7,7 +7,7 @@ function BuyResidentialsPage({ data }) {
       <aside className="w-[20%] shadow-3xl rounded-xl text-black p-1 h-[270px]">
         <SideBarSearch />
       </aside>
-      <main className="w-[80%] flex items-center justify-between flex-wrap gap-2">
+      <main className="w-[80%] flex items-center  flex-wrap gap-2 gap-x-4 flex-auto max-xl:justify-between max-xl:gap-1">
         {data ? (
           <>
             {data?.map((item) => (

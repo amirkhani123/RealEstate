@@ -74,3 +74,24 @@ input,textarea,button{
  color: var(--primary);
  margin-left: 5px;
 }
+.text-dashboard{
+  @apply w-full font-light  my-1
+}
+
+.header-list{
+  position: relative;
+  transition: all 0.5s ease-in;
+}
+.header-list::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  bottom: -1.5px;
+  right: 1px;
+  background-color: white ;
+  transition: all 0.5s ease-in;
+} 
+.header-list:hover::before{
+  width: 100%;
+}

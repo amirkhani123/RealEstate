@@ -5,18 +5,27 @@ import { LuLogIn } from "react-icons/lu";
 import { IoSunny } from "react-icons/io5";
 import { FaMoon, FaUserAlt } from "react-icons/fa";
 import { useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
+import { links } from "@/constants/Variables";
 function Header() {
   const [isDark, setIsDark] = useState(false);
   const { data } = useSession();
+  const pathname = usePathname();
   return (
     <header className="flex items-center justify-between bg-primary p-1 lg:rounded-lg lg:my-1 h-[80px] px-2 ">
       <ul className="flex gap-4">
-        <li className="ease-in transition-all duration-600 relative before:content-[' '] before:w-0 before:absolute before:bg-second before:h-[1.2px]  before:top-6 before:right-1 hover:before:w-full before:transition-all before:duration-500 before:ease-in ">
-          <Link href="/">صفحه اصلی</Link>
-        </li>
-        <li className="ease-in transition-all duration-600 relative before:content-[' '] before:w-0 before:absolute before:bg-second before:h-[1.2px]  before:top-6 before:right-1 hover:before:w-full before:transition-all before:duration-500 before:ease-in ">
-          <Link href="/buy-residentials"> آگهی ها</Link>
-        </li>
+        {links.map((i, index) => (
+          <li
+            key={index}
+            className={
+              pathname === i.link
+                ? "header-list text-blue-400 "
+                : "header-list"
+            }
+          >
+            <Link href={i.link}> {i.text}</Link>
+          </li>
+        ))}
       </ul>
       <div className="flex items-center">
         {data ? (

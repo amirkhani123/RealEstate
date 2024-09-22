@@ -1,3 +1,5 @@
+import { listFoter } from "@/constants/Variables";
+
 function Footer() {
   return (
     <footer className="flex bg-primary p-2 lg:rounded-md lg:mb-1 justify-between">
@@ -11,10 +13,9 @@ function Footer() {
       </div>
       <div>
         <ul className="list-disc">
-          <li>تعرفه قانونی</li>
-          <li>دسترسی سریع</li>
-          <li>مشاورین خبره</li>
-          <li>قولنامه محضری</li>
+          {listFoter.map((i, index) => (
+            <li key={index}>{i}</li>
+          ))}
         </ul>
       </div>
     </footer>

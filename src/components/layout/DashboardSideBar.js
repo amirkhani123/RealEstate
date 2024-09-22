@@ -14,13 +14,13 @@ async function DashboardSideBar({ children }) {
           {session?.user.email}
         </p>
         <span className="inline w-full h-px bg-gray-500 mb-2 font-medium"></span>
-        <Link href="/dashboard" className="w-full font-light  my-1 ">
+        <Link href="/dashboard" className="text-dashboard ">
           حساب کاربری
         </Link>
-        <Link href="/dashboard/my-ads" className="w-full font-light  my-1 ">
+        <Link href="/dashboard/my-ads" className="text-dashboard ">
           آگهی های من
         </Link>
-        <Link href="/dashboard/register-ad" className="w-full font-light  my-1 ">
+        <Link href="/dashboard/register-ad" className="text-dashboard ">
           ثبت اگهی
         </Link>
         <LogutButton />
