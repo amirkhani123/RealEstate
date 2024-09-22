@@ -59,3 +59,18 @@ input,textarea,button{
 .home-list{
   @apply w-[165px] flex items-center gap-5 font-light text-lg bg-blue-200 py-1 px-2 rounded-md;
 }
+.p{
+  @apply flex items-center gap-2
+}
+.box-sidbar{
+  @apply w-full flex items-center flex-col shadow-3xl rounded-lg p-2 my-3
+}
+
+.my-transitian{
+  @apply transition-all duration-300 ease-in
+}
+.list-style::before{
+ content: " ○";
+ color: var(--primary);
+ margin-left: 5px;
+}

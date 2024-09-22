@@ -35,7 +35,7 @@ const profileSchema = new Schema(
       required: true,
       enum: ["villa", "apartment", "store", "office"],
     },
-    rulles: {
+    rules: {
       type: [String],
       default: [],
     },

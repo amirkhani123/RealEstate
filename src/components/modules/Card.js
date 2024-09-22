@@ -4,7 +4,9 @@ import { PiBuildingApartmentFill } from "react-icons/pi";
 import { GiPostOffice } from "react-icons/gi";
 import { GrLocation } from "react-icons/gr";
 import Link from "next/link";
-function Card({ data: { title, location, price, description, category } }) {
+function Card({
+  data: { title, location, price, description, category, _id },
+}) {
   const myPrice = Number(price);
   const icons = {
     villa: <MdOutlineVilla size={25} />,
@@ -26,7 +28,7 @@ function Card({ data: { title, location, price, description, category } }) {
         {myPrice.toLocaleString("fa-IR")} تومان
       </p>
       <Link
-        href="/dashboard"
+        href={`/buy-residentials/${_id}`}
         className="flex items-center justify-between text-primary mt-5"
       >
         مشاهده آگهی

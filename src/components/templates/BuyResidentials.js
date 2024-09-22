@@ -1,5 +1,4 @@
 "use cilent";
-import { ClientPageRoot } from "next/dist/client/components/client-page";
 import Card from "../modules/Card";
 import SideBarSearch from "../modules/SideBarSearch";
 function BuyResidentialsPage({ data }) {
