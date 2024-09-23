@@ -76,3 +76,33 @@ export async function PUT(req) {
   }
 }
 
+export async function PATCH(req) {
+  const session = await getServerSession(req);
+  try {
+    await connectDB();
+    const { _id } = await req.json();
+    if (!_id)
+      return NextResponse.json(
+        { message: "اطلاعات وارد شده نامعتبر", type: "filed" },
+        { status: "500" }
+      );
+    const user = await modelUser.findOne({ email: session.user.email });
+    const profile = await modelProfile.findOne({ _id });
+    if (!user.role === "ADMIN")
+      return NextResponse.json(
+        { message: "حساب کاربری نامعتبر", type: "filed" },
+        { status: "402" }
+      );
+    profile.published = true;
+    await profile.save();
+    return NextResponse.json(
+      { message: "آگهی با موفقیت انتشار شد 😀", type: "success" },
+      { status: "200" }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { message: "مشکلی در سمت سرور پیش آمده است", type: "filed" },
+      { status: "500" }
+    );
+  }
+}

@@ -16,11 +16,11 @@ export async function DELETE(req, context) {
     await connectDB();
     const user = await modelUser.findOne({ email: session.user.email });
     const profile = await modelProfile.findOne({ _id: profileId });
-    if (!user.equals(profile.userId))
+    if (!user.equals(profile.userId) && user.role === "USER")
       return NextResponse.json(
         { message: "حساب کاربری نا معتبر است", type: "filed" },
         { status: "402" }
-      ); 
+      );
     await modelProfile.deleteOne({ _id: profileId });
     return NextResponse.json(
       {

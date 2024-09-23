@@ -1,8 +1,11 @@
 "use client";
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { MdOutlineLogout } from "react-icons/md";
+
 function LogutButton() {
+  const router = useRouter();
   return (
     <button
       onClick={() => {

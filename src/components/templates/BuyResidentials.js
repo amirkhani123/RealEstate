@@ -8,7 +8,7 @@ function BuyResidentialsPage({ data }) {
         <SideBarSearch />
       </aside>
       <main className="w-[80%] flex items-center  flex-wrap gap-2 gap-x-4 flex-auto max-xl:justify-between max-xl:gap-1">
-        {data ? (
+        {data.length ? (
           <>
             {data?.map((item) => (
               <Card data={item} key={item._id} />
@@ -16,7 +16,7 @@ function BuyResidentialsPage({ data }) {
           </>
         ) : (
           <h2 className="w-full text-center font-normal text-2xl text-red-500 mt-11">
-            مشکلی پیش آمده است !🥲
+         هیچ آگهی یافت نشد !🥲
           </h2>
         )}
       </main>
