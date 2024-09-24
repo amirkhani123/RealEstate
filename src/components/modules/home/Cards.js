@@ -4,11 +4,11 @@ import Link from "next/link";
 
 function Cards() {
   return (
-    <div className="flex flex-wrap items-start justify-between mt-2">
+    <div className="flex flex-wrap items-center justify-between mt-2 w-full ">
       {categorys.map((i, index) => (
         <Link
           key={index}
-          className="home-card"
+          className="home-card "
           href={`/buy-residentials?category=${Object.keys(i)} `}
         >
           <Image

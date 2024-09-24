@@ -46,7 +46,7 @@ input,textarea,button{
   @apply  transition-all duration-300 ease-in hover:opacity-50;
 }
 .home-card{
-  @apply w-[205px] h-[215px]  m-1  flex items-center flex-col  rounded-md overflow-hidden shadow-3xl transition-all ease-in duration-300 cursor-pointer;
+  @apply w-[205px] h-[215px]  m-1  flex items-center flex-col  rounded-md overflow-hidden shadow-3xl transition-all ease-in duration-300 cursor-pointer  max-sm:w-[350px] max-sm:w-[315px] mx-auto my-3;
 }
 .home-card p{
   @apply text-primary mt-2 text-lg font-medium dark:text-second ;
