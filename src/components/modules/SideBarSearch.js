@@ -1,5 +1,4 @@
-
-import { categorys } from "@/constants/Variables";
+import { categorys } from "@/constants/variables";
 import Link from "next/link";
 import { FaFilter } from "react-icons/fa";
 

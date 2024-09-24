@@ -1,7 +1,7 @@
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { GrLocation } from "react-icons/gr";
 import Link from "next/link";
-import { icons } from "@/constants/Variables";
+import { icons } from "@/constants/variables";
 function Card({ data: { title, location, price, category, _id } }) {
   const myPrice = Number(price);
 

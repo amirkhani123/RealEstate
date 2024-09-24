@@ -1,4 +1,4 @@
-import { listFoter } from "@/constants/Variables";
+import { listFoter } from "@/constants/variables";
 
 function Footer() {
   return (

@@ -1,4 +1,4 @@
-import { categorys } from "@/constants/Variables";
+import { categorys } from "@/constants/variables";
 import Image from "next/image";
 import Link from "next/link";
 

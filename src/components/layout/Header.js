@@ -6,7 +6,7 @@ import { IoSunny } from "react-icons/io5";
 import { FaMoon, FaUserAlt } from "react-icons/fa";
 import { useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
-import { links } from "@/constants/Variables";
+import { links } from "@/constants/variables";
 function Header() {
   const [isDark, setIsDark] = useState(false);
   const { data } = useSession();
@@ -18,9 +18,7 @@ function Header() {
           <li
             key={index}
             className={
-              pathname === i.link
-                ? "header-list text-blue-400 "
-                : "header-list"
+              pathname === i.link ? "header-list text-blue-400 " : "header-list"
             }
           >
             <Link href={i.link}> {i.text}</Link>

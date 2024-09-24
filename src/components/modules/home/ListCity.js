@@ -1,4 +1,4 @@
-import { citys } from "@/constants/Variables";
+import { citys } from "@/constants/variables";
 import { FaCity } from "react-icons/fa";
 function ListCity() {
   return (
