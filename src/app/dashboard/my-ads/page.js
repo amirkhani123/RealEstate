@@ -1,6 +1,6 @@
+"use server"
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import MyAdsPage from "@/components/templates/MyAdsPage";
-import modelProfile from "@/models/profile";
 import modelUser from "@/models/user";
 import connectDB from "@/utils/connections";
 import { getServerSession } from "next-auth";
