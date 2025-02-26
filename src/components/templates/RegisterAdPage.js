@@ -42,7 +42,7 @@ function RegisterAdPage({ profile }) {
     if (profile) {
       setProfileData(profile);
     }
-  }, []);
+  }, [profile,router]);
   return (
     <div>
       <h3 className="w-[800px] bg-blue-500 text-white p-2 rounded-md text-lg font-light">

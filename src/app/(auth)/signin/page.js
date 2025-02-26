@@ -1,5 +1,5 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import SigninPage from "@/components/templates/SigninPage";
+import SigninPage from "@/components/templates/SigninPageT";
 import { getServerSession } from "next-auth";
 
 async function Signin() {

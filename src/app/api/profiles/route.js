@@ -2,6 +2,7 @@ import modelProfile from "@/models/profile";
 import modelUser from "@/models/user";
 import connectDB from "@/utils/connections";
 import { getServerSession } from "next-auth";
+import { revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 
 export async function PUT(req) {
@@ -64,6 +65,7 @@ export async function PUT(req) {
     profile.realState = realState;
     profile.amenities = amenities;
     profile.save();
+    revalidateTag("ads");
     return NextResponse.json(
       { message: "آگهی شما با موفقیت ویرایش شد 😀", type: "success" },
       { status: "200" }
@@ -95,6 +97,7 @@ export async function PATCH(req) {
       );
     profile.published = true;
     await profile.save();
+    revalidateTag("ads");
     return NextResponse.json(
       { message: "آگهی با موفقیت انتشار شد 😀", type: "success" },
       { status: "200" }
