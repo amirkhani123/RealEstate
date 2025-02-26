@@ -9,7 +9,7 @@ export  async function GET() {
       .find({ published: true })
       .select("-userId");
     return NextResponse.json(
-      { profiles },
+      { data:"sssss" },
       { status: 200 }
     );
   } catch {
