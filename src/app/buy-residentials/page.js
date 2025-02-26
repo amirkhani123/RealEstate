@@ -3,7 +3,7 @@ import BuyResidentialsPage from "@/components/templates/BuyResidentials";
 async function BuyResidentials({ searchParams }) {
   const res = await fetch(
     `${process.env.NEXTAUTH_URL}api/advertisements`,
-    { next: { tags: "ads" } }
+    {cache:"no-store"}
   );
   const {profiles}=await res.json()
   const { category } = await searchParams;
