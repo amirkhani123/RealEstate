@@ -2,16 +2,13 @@ import modelProfile from "@/models/profile";
 import connectDB from "@/utils/connections";
 import { NextResponse } from "next/server";
 
-export  async function GET() {
+export async function GET() {
   try {
     await connectDB();
     const profiles = await modelProfile
       .find({ published: true })
       .select("-userId");
-    return NextResponse.json(
-      { data:"sssss" },
-      { status: 200 }
-    );
+    return NextResponse.json({ profiles }, { status: 200 });
   } catch {
     return NextResponse.json(
       { message: "مشکلی سمت سرور رخ داده است ", type: "failed" },

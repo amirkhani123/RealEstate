@@ -2,6 +2,7 @@ import modelProfile from "@/models/profile";
 import modelUser from "@/models/user";
 import connectDB from "@/utils/connections";
 import { getServerSession } from "next-auth";
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
 export async function DELETE(req, context) {
@@ -22,6 +23,7 @@ export async function DELETE(req, context) {
         { status: "402" }
       );
     await modelProfile.deleteOne({ _id: profileId });
+    revalidatePath("/buy-residentials");
     return NextResponse.json(
       {
         message: "با موفقیت آگهی شما حذف شد 😀",
