@@ -1,16 +1,25 @@
-import DashboardPage from "@/components/templates/DashboardPage";
+"use server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
-import modelUser from "@/models/user";
 
-async function Dashboard() {
+async function page() {
   const session = await getServerSession(authOptions);
-  const user = await modelUser.findOne({ email: session.user.email });
   return (
-    <>
-      <DashboardPage createAt={user.createAt} />
-    </>
+    <div className="mx-5">
+      <h3 className="font-light text-lg text-gray-700  dark:text-second">
+        سلام 👋
+      </h3>
+      <p className="font-light text-lg text-gray-700 my-2  dark:text-second">
+        آگهی های خود را ثبت کنید تا هزاران نفر آن را مشاهده کنند
+      </p>
+      <div className="font-light text-lg text-second flex items-center gap-1 mt-11 bg-primary w-fit p-1 rounded-md ">
+        <p>تاریخ عضویت :</p>
+        <span>
+          {new Date(session.user.createAt).toLocaleDateString("fa-IR")}
+        </span>
+      </div>
+    </div>
   );
 }
 
-export default Dashboard;
+export default page;

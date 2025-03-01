@@ -1,7 +1,7 @@
-import { RotatingLines } from "react-loader-spinner";
+
 
 function Loader() {
-  return <RotatingLines width="55" strokeWidth="3" strokeColor="#1d4ed8" />;
+  return   <div className="size-11 border-blue-600 border-[5px] border-dotted border-l-transparent  border-r-transparent rounded-full animate-rotate"></div>
 }
 
 export default Loader;

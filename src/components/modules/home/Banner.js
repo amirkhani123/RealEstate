@@ -13,7 +13,7 @@ function Banner() {
           تر کند این شرکت از سال 1403 شروع به فعالت کرده است
         </span>
       </div>
-      <Image src="/images/home.png" width={410} height={750} alt="bannerpng" />
+      <Image src="/images/home.png" width={310} height={250} alt="bannerpng" priority className="w-[450px]" />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import RegisterAd from "@/app/dashboard/register-ad/page";
 import RegisterAdPage from "@/components/templates/RegisterAdPage";
 import modelProfile from "@/models/profile";
 import connectDB from "@/utils/connections";

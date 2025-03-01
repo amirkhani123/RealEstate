@@ -1,11 +1,7 @@
 import RegisterAdPage from "@/components/templates/RegisterAdPage";
 
-function RegisterAd() {
-  return (
-    <>
-      <RegisterAdPage />
-    </>
-  );
+function page() {
+  return <RegisterAdPage />;
 }
 
-export default RegisterAd;
+export default page;

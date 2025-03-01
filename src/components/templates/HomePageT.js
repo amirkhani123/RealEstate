@@ -3,18 +3,15 @@ import Banner from "../modules/home/Banner";
 import Cards from "../modules/home/Cards";
 import ListCity from "../modules/home/ListCity";
 import toast from "react-hot-toast";
+import Questions from "../modules/home/Questions";
 
-async function HomePageT() {
-  try {
-    await connectDB();
-  } catch (error) {
-    toast.error("مشکل در برقراری ارتباط !🥲");
-  }
+function HomePageT() {
   return (
-    <div className="m-2">
+    <div className="mt-2">
       <Banner />
       <Cards />
       <ListCity />
+      <Questions />
     </div>
   );
 }

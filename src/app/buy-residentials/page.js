@@ -2,7 +2,7 @@ import BuyResidentialsPage from "@/components/templates/BuyResidentials";
 async function BuyResidentials({ searchParams }) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/advertisements`,
-    { next:{revalidate:60*60*2}}
+    { cache: "force-cache" }
   );
   const data = await res.json();
   if (data.profiles) {
@@ -15,7 +15,7 @@ async function BuyResidentials({ searchParams }) {
     }
   } else {
     return (
-      <div className="flex items-center justify-center w-full h-[50vh]">
+      <div className="flex items-center justify-center w-full h-[50vh] text-black dark:text-white">
         <p>مشکلی پیش آمده است</p>
       </div>
     );

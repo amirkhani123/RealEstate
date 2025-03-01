@@ -3,6 +3,7 @@ import connectDB from "@/utils/connections";
 import { NextResponse } from "next/server";
 
 export async function GET() {
+  console.log("FETCH :)");
   try {
     await connectDB();
     const profiles = await modelProfile
