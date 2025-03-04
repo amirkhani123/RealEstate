@@ -52,9 +52,7 @@ input,textarea,button{
   @apply text-primary mt-2 text-lg font-medium dark:text-second ;
 }
 .home-card:hover{
-  
   @apply w-[215px]  rotate-[-10deg];
-
 }
 .home-list{
   @apply w-[165px] flex items-center gap-5 font-light text-lg bg-blue-200 py-1 px-2 rounded-md;

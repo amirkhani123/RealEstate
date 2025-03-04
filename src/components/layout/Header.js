@@ -44,13 +44,13 @@ function Header() {
           </Link>
         )}
         <button
-          className="border p-[3px] rounded-md mr-1 border-gray-950 dark:border-white"
+          className=" p-[3px]  mr-1 fixed bottom-12 left-3"
           onClick={() => {
             setIsDark(!isDark);
             document.documentElement.classList.toggle("dark");
           }}
         >
-          {isDark ? <IoSunny /> : <FaMoon color="#171717" />}
+          {isDark ? <IoSunny size={30}/> : <FaMoon color="#171717" size={30} />}
         </button>
       </div>
     </header>

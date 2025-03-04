@@ -6,7 +6,7 @@ function ListCity() {
       <h4 className="w-full text-center font-normal text-2xl ">
         محله های پر بازدید
       </h4>
-      <div>
+      <div className="max-sm:p-2">
         <ul className="flex items-center justify-between flex-wrap mt-10 gap-2">
           {citys.map((i, index) => (
             <li className="home-list" key={index}>

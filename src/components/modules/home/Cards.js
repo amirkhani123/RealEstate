@@ -6,12 +6,12 @@ import { Fade } from "react-awesome-reveal";
 
 function Cards() {
   return (
-    <div className="flex flex-wrap items-center justify-between mt-2 w-full ">
+    <div className="flex flex-wrap items-center justify-between mt-2 w-full max-md:flex-col">
       <Fade direction="up" cascade triggerOnce>
         {categorys.map((i, index) => (
           <Link
             key={index}
-            className="home-card "
+            className="home-card max-sm:hover:rotate-0 max-sm:w-full max-sm:hover:w-full"
             href={`/buy-residentials?category=${Object.keys(i)} `}
           >
             <Image
