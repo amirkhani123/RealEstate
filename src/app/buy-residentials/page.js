@@ -1,8 +1,7 @@
 import BuyResidentialsPage from "@/components/templates/BuyResidentials";
 async function BuyResidentials({ searchParams }) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/advertisements`,
-    { cache: "force-cache" }
+    `${process.env.NEXT_PUBLIC_API_URL}/api/advertisements`
   );
   const data = await res.json();
   if (data.profiles) {
