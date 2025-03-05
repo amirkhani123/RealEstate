@@ -1,4 +1,5 @@
-import BuyResidentialsPage from "@/components/templates/BuyResidentials";
+import BuyResidentialsPageT from "@/components/templates/BuyResidentialsT";
+
 async function BuyResidentials({ searchParams }) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/advertisements`,
@@ -9,9 +10,9 @@ async function BuyResidentials({ searchParams }) {
     const { category } = await searchParams;
     if (category) {
       const showData = data.profiles.filter((i) => i.category === category);
-      return <BuyResidentialsPage data={showData} />;
+      return <BuyResidentialsPageT data={showData} />;
     } else {
-      return <BuyResidentialsPage data={data.profiles} />;
+      return <BuyResidentialsPageT data={data.profiles} />;
     }
   } else {
     return (

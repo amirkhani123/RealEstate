@@ -18,6 +18,8 @@ module.exports = {
       },
       animation: {
         rotate: "rotateKey 1.5s infinite linear ",
+        "fade-in": "rotateKey 0.5s   ",
+        "fade-in-menu": "fadeInMenuKey .3s linear forwards",
       },
       keyframes: {
         rotateKey: {
@@ -26,6 +28,22 @@ module.exports = {
           },
           to: {
             transform: "rotate(360deg)",
+          },
+        },
+        fateInKey: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(5deg)",
+          },
+        },
+        fadeInMenuKey: {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
           },
         },
       },

@@ -2,10 +2,10 @@ import { GrLocation } from "react-icons/gr";
 import Title from "../ui/Title";
 import SideBarDetails from "./SideBarDetails";
 
-function DetailsAds({ data }) {
+function DetailsAdsT({ data }) {
   return (
-    <div className="flex gap-1">
-      <main className="text-primary p-2 w-[75%]">
+    <div className="flex gap-1 max-md:flex-col">
+      <main className="text-primary p-2 w-[75%] max-md:w-full">
         <div className="mb-5">
           <h2 className="text-lg font-normal ">{data.title}</h2>
           <p className="flex items-center gap-1 mt-1 text-gray-600 text-sm">
@@ -46,11 +46,11 @@ function DetailsAds({ data }) {
           )}
         </div>
       </main>
-      <aside className=" text-black w-[25%]">
+      <aside className=" text-black w-[25%] max-md:w-full">
         <SideBarDetails data={data}></SideBarDetails>
       </aside>
     </div>
   );
 }
 
-export default DetailsAds;
+export default DetailsAdsT;

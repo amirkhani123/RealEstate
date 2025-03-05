@@ -45,7 +45,7 @@ function RegisterAdPage({ profile }) {
   }, [profile, router]);
   return (
     <div>
-      <h3 className="w-[800px] bg-blue-500 text-white p-2 rounded-md text-lg font-light">
+      <h3 className="w-[800px] bg-blue-500 text-white p-2 rounded-md text-lg font-light max-md:w-full">
         {!profile ? "ثبت آگهی" : "ویرایش آکهی"}
       </h3>
       <TextInput

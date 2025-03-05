@@ -19,9 +19,9 @@ function MyAdsCard({ data }) {
     }
   };
   return (
-    <div className="w-full h-[270px] flex gap-5 border-blue-600 border-[2px] p-2 rounded-md m-1">
+    <div className="w-full h-[270px] flex gap-5 border-blue-600 border-[2px] p-2 rounded-md m-1  max-md:flex-col max-md:items-center max-md:h-fit">
       <Card data={data} />
-      <div className="flex items-center justify-between w-[65%] mt-[180px]">
+      <div className="flex items-center justify-between w-[65%] mt-[180px] max-md:w-full max-md:justify-between max-md:gap-2 max-md:mt-2">
         <Link
           className="border border-green-500 text-green-500 w-[270px] font-light p-2 rounded-md transition-all duration-500 ease-in hover:bg-green-500 hover:text-second text-center  "
           href={`/dashboard/my-ads/edit/${data._id}`}

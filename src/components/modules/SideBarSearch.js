@@ -5,7 +5,7 @@ import { FaFilter } from "react-icons/fa";
 function SideBarSearch() {
   return (
     <>
-      <p className="text-lg font-normal flex items-center gap-1 m-2 mx-9 dark:text-second">
+      <p className="text-lg font-normal flex items-center gap-1 m-2 mx-9 dark:text-second max-md:text-center max-md:items-center max-md:justify-center">
         <FaFilter color="#1d4ed8" />
         دسته بندی
       </p>

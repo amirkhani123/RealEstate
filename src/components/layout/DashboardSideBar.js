@@ -1,14 +1,18 @@
 "use client";
-import { FaRegUserCircle } from "react-icons/fa";
 import Link from "next/link";
 import LogutButton from "../ui/LogutButton";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { FaRegUserCircle } from "react-icons/fa";
+import { IoClose, IoMenu } from "react-icons/io5";
+import MenuMobileDashboard from "../modules/MenuMobileDashboard";
 function DashboardSideBar({ children, role, email }) {
   const pathname = usePathname();
+  const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
   return (
-    <div className="flex text-black mt-5 mr-3 gap-2 dark:text-white">
-      <aside className="w-[20%] flex items-center flex-col shadow-3xl rounded-md p-3   h-60">
+    <div className="flex text-black mt-5 mr-3 gap-2 dark:text-white max-md:flex-col">
+      <aside className="w-[20%] flex items-center flex-col shadow-3xl rounded-md p-3 h-60 max-md:hidden">
         <FaRegUserCircle size={55} color="#1d4ed8" />
         <p className="mt-px text-gray-700 text-[0.95rem]  dark:text-white">
           {role === "ADMIN" ? "admin" : email}
@@ -50,7 +54,14 @@ function DashboardSideBar({ children, role, email }) {
         </Link>
         <LogutButton />
       </aside>
-      <main className="w-[80%]">{children}</main>
+      <div
+        onClick={() => setIsShowMenuMobile(!isShowMenuMobile)}
+        className="mr-4 mb-2 hidden max-md:inline-block relative"
+      >
+        {isShowMenuMobile ? <IoClose size={35} className=" animate-fade-in" color="red" /> : <IoMenu size={35}  />}
+        {isShowMenuMobile && <MenuMobileDashboard role={role} />}
+      </div>
+      <main className="w-[80%] max-md:w-full max-md:p-2">{children}</main>
     </div>
   );
 }

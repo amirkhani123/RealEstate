@@ -50,7 +50,11 @@ function Header() {
             document.documentElement.classList.toggle("dark");
           }}
         >
-          {isDark ? <IoSunny size={30}/> : <FaMoon color="#171717" size={30} />}
+          {isDark ? (
+            <IoSunny size={30} className=" animate-fade-in" />
+          ) : (
+            <FaMoon color="#171717" size={30} className=" animate-fade-in" />
+          )}
         </button>
       </div>
     </header>
